@@ -1,0 +1,192 @@
+/* basic stylings ------------------------------------------ */
+.containerInputs {
+
+  font-family: 'Roboto';
+  width: 60vw;
+  margin: 30px auto 0;
+  display: block;
+  background: #2D2F36;
+  padding: 10px 50px 50px;
+  object-position: center;
+  padding-top: 7vh;
+}
+
+.h2Inputs {
+  color: rgb(255, 255, 255);
+
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+/* form starting stylings ------------------------------- */
+.groupInputs {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.groupInputsHalf {
+  display: inline-block;
+  width: 50%;
+  /* grid-row: 1 / span 2; */
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.inputInputs {
+  background-color: #eedce8;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #757575;
+}
+
+.inputInputsHalf {
+  background-color: #eedce8;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 91%;
+  border: none;
+  border-bottom: 1px solid #757575;
+}
+
+.inputInputsHalf:focus {
+  outline: none;
+}
+
+.inputInputs:focus {
+  outline: none;
+}
+
+/* LABEL ======================================= */
+.labelInputs {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+
+.inputInputsHalf:focus~.labelInputs,
+.inputInputs:focus~.labelInputs,
+.inputInputsHalf:valid~.labelInputs,
+.inputInputs:valid~.labelInputs {
+  top: -20px;
+  font-size: 14px;
+  color: #eedce8;
+}
+
+/* BOTTOM BARS ================================= */
+.barInputs {
+  position: relative;
+  display: block;
+  width: 300px;
+}
+
+.barInputs:before,
+.barInputs:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #f960c6;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.barInputs:before {
+  left: 50%;
+}
+
+.barInputs:after {
+  right: 50%;
+}
+
+/* active state */
+.inputInputs:focus~.barInputs:before,
+.inputInputsHalf:focus~.barInputs:before,
+.inputInputs:focus~.barInputs:after {
+  width: 50%;
+}
+
+.inputInputsHalf:focus~.barInputs:after,
+.inputInputsHalf:focus~.barInputs:before {
+  width: 30%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlightInputs {
+  position: absolute;
+  height: 60%;
+  width: 100%;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* active state */
+.inputInputs:focus~.highlightInputs {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+
+.inputInputsHalf:focus~.highlightInputs {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #ae5297;
+  }
+
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@-moz-keyframes inputHighlighter {
+  from {
+    background: #ae5297;
+  }
+
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@keyframes inputHighlighter {
+  from {
+    background: #a25990;
+  }
+
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+.editBtn {
+  margin-left: 0;
+  margin-bottom: 0;
+  border-radius: 10%;
+  background-color: #eedce8;
+}
